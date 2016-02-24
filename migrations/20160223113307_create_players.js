@@ -8,7 +8,6 @@ exports.up = function(knex, Promise) {
     table.integer('games_played');
     table.integer('games_won');
     table.integer('children_created');
-    table.integer('times_died');
     table.integer('times_married');
     table.integer('net_value');
   })

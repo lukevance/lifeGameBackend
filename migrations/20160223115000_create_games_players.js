@@ -11,6 +11,7 @@ exports.up = function(knex, Promise) {
     table.integer('kids');
     table.boolean('chipotle');
     table.integer('salary');
+    table.string('addiction');
   })
 };
 
