@@ -1,4 +1,13 @@
+'use strict';
 
+function newGameHandler (req, res, next) {
+  res.send('you made it!!!');
+
+}
+
+
+
+module.exports = newGameHandler;
 
 
 // function(req, res, next) {
