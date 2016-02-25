@@ -15,7 +15,7 @@ var getCard = require('./drawCard');
 var endGame = require('./endGame');
 
 // Sign IN
-router.get('/signin', signin);
+router.post('/signin', signin);
 // add player
 router.post('/newPlayer', newPlayer);
 // New game
