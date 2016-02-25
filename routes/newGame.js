@@ -1,10 +1,13 @@
-'use strict';
+// 'use strict';
+var knex = require('../db/knex');
 
 function newGameHandler (req, res, next) {
-  res.send('you made it!!!');
+  knex('games').insert({stories: 'someStory'}).returning('id')
+  .then(function(response) {
+    res.json(response);
+  });
 
 }
-
 
 
 module.exports = newGameHandler;
