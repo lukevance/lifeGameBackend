@@ -4,7 +4,7 @@ var knex = require('../db/knex');
 function newGameHandler (req, res, next) {
   knex('games').insert({stories: 'someStory'}).returning('id')
   .then(function(response) {
-    res.send('success', response);
+    res.json('success', response);
   });
 }
 

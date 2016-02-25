@@ -13,7 +13,7 @@ function newGamePlayerHandler (req, res, next) {
     salary: 0,
     addiction: 'none'}).returning('*')
   .then(function(response) {
-    res.send('success', response);
+    res.json('success', response);
   });
 }
 
