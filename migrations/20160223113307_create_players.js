@@ -2,6 +2,8 @@ exports.up = function(knex, Promise) {
   return knex.schema.createTable('players', function(table){
     table.increments();
     table.string('name');
+    table.string('email');
+    table.string('password');
     table.string('gender');
     table.string('color');
     table.integer('high_score');
@@ -10,7 +12,7 @@ exports.up = function(knex, Promise) {
     table.integer('children_created');
     table.integer('times_married');
     table.integer('net_value');
-  })
+  });
 };
 
 exports.down = function(knex, Promise) {
