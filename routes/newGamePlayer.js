@@ -1,7 +1,8 @@
 var knex = require('../db/knex');
 
 function newGamePlayerHandler (req, res, next) {
-  knex('games_players').insert({game_id: req.body.gameSession,
+  console.log(req.body);
+  knex('games_players').insert({game_id: req.body.id,
     player_id: req.body.playerID,
     money: 0,
     position: 0,
@@ -12,8 +13,11 @@ function newGamePlayerHandler (req, res, next) {
     chipotle: false,
     salary: 0,
     addiction: 'none'}).returning('*')
-  .then(function(response) {
-    res.json('success', response);
+  .then(function(response, err) {
+    res.json({message: response});
+  })
+  .catch(function(err){
+    res.send(err);
   });
 }
 
