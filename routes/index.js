@@ -13,6 +13,8 @@ var newGame = require('./newGame');
 var endTurn = require('./endTurn');
 var getCard = require('./drawCard');
 var endGame = require('./endGame');
+var newGameStoriesOnionBuzzfeed = require('./newGameStoriesOnionBuzzfeed');
+
 
 // Sign IN
 router.get('/signin', signin);
@@ -20,6 +22,11 @@ router.get('/signin', signin);
 router.post('/newPlayer', newPlayer);
 // New game
 router.post('/newGame', newGame);
+
+
+
+// inserting stories into db from The Onion and Buzzfeed
+router.post('/newGameStoriesOnionBuzzfeed', newGameStoriesOnionBuzzfeed);
 // end turn
 router.put('/endTurn', endTurn);
 // draw card

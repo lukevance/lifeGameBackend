@@ -1,7 +1,7 @@
 'use strict';
 
 function newGameHandler (req, res, next) {
-  res.send('you made it!!!');
+ res.send('blah');
 
 }
 
