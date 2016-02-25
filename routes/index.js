@@ -10,6 +10,8 @@ var knex = require('knex')({
 var signin = require('./signin');
 var newPlayer = require('./newPlayer');
 var newGame = require('./newGame');
+var newGamePlayer = require('./newGamePlayer');
+// var newGameStories = require('./newGameStories');
 var endTurn = require('./endTurn');
 var getCard = require('./drawCard');
 var endGame = require('./endGame');
@@ -20,6 +22,8 @@ router.get('/signin', signin);
 router.post('/newPlayer', newPlayer);
 // New game
 router.post('/newGame', newGame);
+router.post('/newGamePlayer', newGamePlayer);
+// router.post('/newGameStories', newGameStories);
 // end turn
 router.put('/endTurn', endTurn);
 // draw card
