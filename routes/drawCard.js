@@ -18,6 +18,6 @@ function drawCardHandler (req, res, next) {
   //Choosing a random story from the (hopefully) array
   var randoStory = possibleStories[Math.floor(possibleStories.length*Math.random())];
   res.json(randoStory);
-};
+}
 
 module.exports = drawCardHandler;

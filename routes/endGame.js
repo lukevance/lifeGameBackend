@@ -6,18 +6,15 @@ var knex = require('../db/knex');
 function endGameHandler (req, res, next) {
   var id = req.body.game_id;
   // Deleting from games_players table
+  console.log(req.body.game_id);
   knex('games_players').where('game_id', id).del().then(function() {
-    console.log('game deleted from games_players: ' + id);
-  });
-  // Deleting from the stories table
-  knex('stories').where('game_id', id).del().then(function() {
-    console.log('stories deleted from stories table: ' + id);
-  });
-  // Deleting from the games table
-  knex('games').where('game_id', id).del().then(function() {
-    console.log
+    return knex('stories').where('game_id', id).del();
+  }).then(function() {
+    return knex('games').where('id', id).del();
+  }).then(function() {
+    res.json({success: true})
   })
-};
+  };
 
 //TODO: make a route for updating player stats
 
