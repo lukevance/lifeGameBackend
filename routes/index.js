@@ -11,7 +11,7 @@ var signin = require('./signin');
 var newPlayer = require('./newPlayer');
 var newGame = require('./newGame');
 var endTurn = require('./endTurn');
-var getCard = require('./drawCard');
+var drawCard = require('./drawCard');
 var endGame = require('./endGame');
 
 // Sign IN
@@ -23,7 +23,7 @@ router.post('/newGame', newGame);
 // end turn
 router.put('/endTurn', endTurn);
 // draw card
-router.get('/getCard', getCard);
+router.post('/drawCard', drawCard);
 // end game
 router.delete('/endGame', endGame);
 
