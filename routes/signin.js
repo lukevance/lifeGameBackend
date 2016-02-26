@@ -17,11 +17,11 @@ function signinHandler(req, res, next) {
             message: 'Incorrect Password!'
           });
         }
-      })
+      });
     })
     .catch(function(error) {
       console.log(error);
-    })
+    });
 }
 
 

@@ -11,7 +11,6 @@ function newPlayerHandler(req, res, next) {
   };
 
   bcrypt.hash(req.body.password, 10, function(err, hash) {
-    console.log(hash);
     newPlayer.password = hash;
     addPlayer();
   });
@@ -27,7 +26,7 @@ function newPlayerHandler(req, res, next) {
       .then(function(data) {
         if (data.length === 0) {
           return knex('players')
-            .insert(newPlayer)
+            .insert(newPlayer);
         } else {
           res.send({
             message: 'Email account already in use!!'
