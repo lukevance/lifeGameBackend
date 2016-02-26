@@ -1,15 +1,14 @@
 var knex = require('../db/knex');
 
 function newGameStoryGuardianHandler (req, res, next) {
-  console.log(req.body.article.blocks);
+  console.log(req.body);
   knex('stories').insert({game_id: req.body.gameSession,
-    title: req.body.article.webTitle,
+    title: req.body.webTitle,
     type: req.body.type,
-    url: req.body.article.webUrl,
-    summary: req.body.article.blocks.body.bodyTextSummary
+    url: req.body.webUrl
   }).returning('*')
   .then(function(insertion) {
-    res.send(insertion)
+    res.send(insertion);
   });
 }
 
