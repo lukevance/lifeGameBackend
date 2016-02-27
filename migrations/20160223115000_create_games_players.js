@@ -3,6 +3,7 @@ exports.up = function(knex, Promise) {
     table.increments();
     table.integer('game_id');
     table.integer('player_id');
+    table.string('color');
     table.integer('money');
     table.integer('position');
     table.string('occupation');
@@ -12,7 +13,7 @@ exports.up = function(knex, Promise) {
     table.boolean('chipotle');
     table.integer('salary');
     table.string('addiction');
-  })
+  });
 };
 
 exports.down = function(knex, Promise) {

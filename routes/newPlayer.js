@@ -37,8 +37,8 @@ function newPlayerHandler(req, res, next) {
         res.json(insertStatus);
       })
       .catch(function(error) {
-        console.log(error)
-      })
+        console.log(error);
+      });
       // if not, then insert with KNEX
   }
 }

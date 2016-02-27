@@ -5,7 +5,6 @@ exports.up = function(knex, Promise) {
     table.string('email');
     table.string('password');
     table.string('gender');
-    table.string('color');
     table.integer('high_score');
     table.integer('games_played');
     table.integer('games_won');

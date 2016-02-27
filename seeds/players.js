@@ -8,7 +8,7 @@ exports.seed = function(knex, Promise) {
     knex('players').insert({
       name: 'Jimmy',
       email: 'thisguy@hotmail.com',
-      password: 'password',
+      password: '$2a$10$rxoir.fG12nUFKof7jxOjuR59c4ybXeZzpecLC0diULKvypuh8cPC',
       gender: 'male',
       color: 'yellow',
       high_score: '10000',
