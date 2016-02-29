@@ -20,7 +20,6 @@
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
-    "cors": "^2.7.1",
-    "dotenv": "^2.0.0"
+    "cors": "^2.7.1"
   }
 }
