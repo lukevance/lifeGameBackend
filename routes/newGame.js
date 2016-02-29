@@ -5,7 +5,10 @@ function newGameHandler (req, res, next) {
   knex('games').insert({stories: 'someStory'}).returning('id')
   .then(function(response) {
     res.json(response);
-  });
+  })
+  .catch(function(err) {
+    res.send(err);
+  })
 
 }
 
