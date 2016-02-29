@@ -14,6 +14,7 @@ function endTurnHandler (req, res) {
     occupation: req.body.occupation,
     college: req.body.college,
     marriage: req.body.marriage,
+    happiness: req.body.happiness,
     kids: req.body.kids,
     chipotle: req.body.chipotle,
     salary: req.body.salary,

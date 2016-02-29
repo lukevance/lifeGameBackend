@@ -9,6 +9,7 @@ exports.up = function(knex, Promise) {
     table.string('occupation');
     table.boolean('college');
     table.boolean('marriage');
+    table.integer('happiness');
     table.integer('kids');
     table.boolean('chipotle');
     table.integer('salary');

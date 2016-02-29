@@ -27,9 +27,7 @@ router.post('/newGame', newGame);
 
 // inserting stories into db from The Onion and Buzzfeed
 router.post('/newGameStoriesOnionBuzzfeed', newGameStoriesOnionBuzzfeed);
-router.post('/newGamePlayer', function(req, res, next){
-  console.log('blah');next();
-}, newGamePlayer);
+router.post('/newGamePlayer', newGamePlayer);
 router.post('/newGameStories', newGameStories);
 
 // end turn

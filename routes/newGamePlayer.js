@@ -9,6 +9,7 @@ function newGamePlayerHandler (req, res, next) {
     occupation: 'none',
     college: false,
     marriage: false,
+    happiness: 100,
     kids: 0,
     chipotle: false,
     salary: 0,
