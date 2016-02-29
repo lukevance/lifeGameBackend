@@ -5,9 +5,7 @@ var bcrypt = require('bcrypt');
 function newPlayerHandler(req, res, next) {
   var newPlayer = {
     name: req.body.name,
-    email: req.body.email,
-    color: req.body.color,
-    gender: req.body.gender
+    email: req.body.email
   };
 
   bcrypt.hash(req.body.password, 10, function(err, hash) {

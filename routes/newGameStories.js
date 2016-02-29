@@ -1,7 +1,7 @@
 var knex = require('../db/knex');
 
 function newGameStoryGuardianHandler (req, res, next) {
-  console.log(req.body);
+  // console.log(req.body);
   knex('stories').insert({game_id: req.body.gameSession,
     title: req.body.webTitle,
     type: req.body.type,
