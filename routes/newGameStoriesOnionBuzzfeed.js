@@ -11,7 +11,7 @@ function newGameStoriesOnionBuzzfeed(req, res, next) {
   }).returning('*')
   .then(function(info){
     res.send(info);
-  })
+  });
 }
 
 

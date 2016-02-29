@@ -1,9 +1,9 @@
 var knex = require('../db/knex');
 
 function newGamePlayerHandler (req, res, next) {
-  console.log(req.body);
   knex('games_players').insert({game_id: req.body.id,
     player_id: req.body.playerID,
+    color: req.body.color,
     money: 0,
     position: 0,
     occupation: 'none',
