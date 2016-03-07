@@ -14,10 +14,11 @@ function drawCardHandler (req, res, next) {
     game_id: card.game_id
   }).select().then(function() {
     console.log('successfully selected stories');
+    //Choosing a random story from the (hopefully) array
+    var randoStory = possibleStories[Math.floor(possibleStories.length*Math.random())];
+    res.json(randoStory);
   });
-  //Choosing a random story from the (hopefully) array
-  var randoStory = possibleStories[Math.floor(possibleStories.length*Math.random())];
-  res.json(randoStory);
+
 }
 
 module.exports = drawCardHandler;
