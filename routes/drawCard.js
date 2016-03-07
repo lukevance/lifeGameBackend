@@ -9,11 +9,10 @@ function drawCardHandler (req, res, next) {
   card.type = req.body.type;
   card.game_id = req.body.game_id;
   //Selecting all possible stories based on id and type
-  var possibleStories = knex('stories').where({
+  knex('stories').where({
     type: card.type,
     game_id: card.game_id
-  }).select().then(function() {
-    console.log('successfully selected stories');
+  }).select().then(function(possibleStories) {
     //Choosing a random story from the (hopefully) array
     var randoStory = possibleStories[Math.floor(possibleStories.length*Math.random())];
     res.json(randoStory);
